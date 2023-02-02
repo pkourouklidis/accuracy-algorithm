@@ -6,5 +6,5 @@ def detector(trainSet, liveSet, parameters):
     secondColumn = liveSet.axes[1][1]
     
     accuracy = accuracy_score(liveSet[firstColumn].to_list(), liveSet[secondColumn].to_list())
-    threshold = float (parameters.get("threshold", 0.7))
+    threshold = float (parameters.get("threshold", 0.8))
     return int(accuracy < threshold), accuracy
